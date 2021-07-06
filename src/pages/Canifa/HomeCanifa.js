@@ -2,17 +2,17 @@ import React from 'react';
 import FooterCanifa from '../../components/FooterCanifa';
 import HeaderCanifa from '../../components/HeaderCanifa';
 import ListnewProductHomepage from '../../components/ListnewProductHomepage';
-import SlideHomeCanifa from '../../components/SlideHomeCanifa';
+import Carousel_layout from '../../components/Carousel/Carousel_layout';
 const HomeCanifa = () => {
   return (
-    <div>
+    <section>
       <HeaderCanifa/>
-      <div className="mx-20 px-2">
-        <SlideHomeCanifa/>
+      <div className="mx-20">
+        <Carousel_layout/>
         <ListnewProductHomepage/>
         <FooterCanifa/>
       </div>
-    </div>
+    </section>
   );
 }
 

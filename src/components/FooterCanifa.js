@@ -5,7 +5,7 @@ const FooterCanifa = () => {
   return (
     <div className="flex justify-between text-sm mt-8">
       <div className="text-gray-600 w-2/12">
-          <p className="text-base font-extrabold text-black">
+          <p className="text-base text-black font-semibold ">
             CÔNG TY CỔ PHẦN CANIFA
           </p>
           <br/>
@@ -31,7 +31,7 @@ const FooterCanifa = () => {
           <p>© 2020 CANIFA</p>
       </div>
       <div className="text-gray-600 w-2/12 pl-20">
-        <p className="text-base font-extrabold text-black">
+        <p className="text-base  text-black font-semibold">
           THƯƠNG HIỆU
         </p>
         <br/>
@@ -61,7 +61,7 @@ const FooterCanifa = () => {
         </p>
       </div>
       <div className="text-gray-600 w-3/12">
-        <p className="text-base font-extrabold text-black">
+        <p className="text-base text-black font-semibold ">
           HỖ TRỢ
         </p>
         <br/>
@@ -88,7 +88,7 @@ const FooterCanifa = () => {
         </p>
       </div>
       <div className="w-4/12">
-        <p className="text-base font-extrabold">
+        <p className="text-base font-semibold">
           ĐĂNG KÝ NHẬN TIN
         </p>
         <br/>

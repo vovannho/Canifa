@@ -4,7 +4,7 @@ import ProductnewHomepage from './ProductnewHomepage';
 const ListnewProductHomepage = () => {
   return (
     <div>
-        <div className="grid grid-cols-2 mt-2">
+        <div className="grid grid-cols-2">
           <img
             className="w-full cursor-pointer" 
             src="/assets/images/vay-be-gai-subcate.jpg" alt="noload">

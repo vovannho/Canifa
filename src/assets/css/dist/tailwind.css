@@ -15,21 +15,7 @@ Document
 /**
 Use a better box model (opinionated).
 */
-.each-slide > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 600px;
-  width : 100%;
-}
 
-.each-slide span {
-  background: #efefef;
-  text-align: center;
-  position: absolute;
-
-}
 
 
 *,
