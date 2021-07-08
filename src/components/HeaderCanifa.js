@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiSearch, } from "react-icons/fi";
 import { BiMap,BiUser } from "react-icons/bi";
 import { AiOutlineShoppingCart} from "react-icons/ai";
 const HeaderCanifa = () => {
+    const [showGT, setShowGT] = useState(false);
   return (
     <section>
         <div className="bg-gray-700">
@@ -11,8 +12,8 @@ const HeaderCanifa = () => {
                 src="/assets/images/GDVH-top-banner-new1.png" alt="noload">
             </img>
         </div>
-        <div> 
-            <div className="flex justify items-center justify-between my-6">
+        <div className="max-w-screen-2xl mx-auto px-20"> 
+            <div className="flex justify items-center justify-between py-6 relative">
                 <ul className="flex justify items-center space-x-8  text-gray-600 font-normal ">
                     <li className="mr-10">
                         <img
@@ -20,9 +21,12 @@ const HeaderCanifa = () => {
                             src="/assets/images/logo-canifa.png" alt="noload">
                         </img>
                     </li>
-                    <li className="cursor-pointer group">
-                        <a href="" className="group-hover:text-red-600">NỮ</a>
-                        <div class="grid grid-cols-5 w-full px-28 text-sm absolute bg-gray-200 bg-opacity-95 opacity-0 left-0  group-hover:opacity-100 mt-20 group-hover: transition-all duration-500">
+                    <div className="cursor-pointer"
+                    onMouseEnter={()=>setShowGT(true)}
+                    onMouseLeave={()=>setShowGT(false)}
+                    >   
+                        <a href="" className=" hover:text-red-600">NỮ</a>
+                        <div class= {`absolute ${showGT==true ? `` : `hidden`} w-full flex justify-between pt-8 px-16 text-sm bg-gray-200 left-0`}>
                             <ul class="mb-10">
                                 <li className="py-6 text-gray-700 font-bold"><a href="" className="">HẰNG NGÀY</a></li>
                                 <li><a href="" className="">Áo phông <a className="text-red-600 ml-1 font-bold">HOT</a></a></li>
@@ -64,8 +68,8 @@ const HeaderCanifa = () => {
                                 </img>
                             </ul>
                         </div>
-                    </li>
-                    <li className="cursor-pointer group">
+                    </div>
+                    {/* <li className="cursor-pointer group">
                         <a href="" className="group-hover:text-red-600">NAM</a>
                         <div class="grid grid-cols-5 w-full px-28 text-sm absolute bg-gray-200 bg-opacity-95 opacity-0 left-0 group-hover:opacity-100 mt-20 group-hover: transition-all duration-500">
                             <ul class="mb-10">
@@ -108,8 +112,8 @@ const HeaderCanifa = () => {
                                 </img>
                             </ul>
                         </div>
-                    </li>
-                    <li className="cursor-pointer group">
+                    </li> */}
+                    {/* <li className="cursor-pointer group">
                         <a href="" className="group-hover:text-red-600">BÉ GÁI</a>
                         <div class="grid grid-cols-5 w-full px-28 text-sm absolute bg-gray-200 bg-opacity-95 opacity-0 left-0  group-hover:opacity-100 mt-20 group-hover: transition-all duration-500">
                             <ul class="mb-10">
@@ -155,8 +159,8 @@ const HeaderCanifa = () => {
                                 </img>
                             </ul>
                         </div>
-                    </li>
-                    <li className="cursor-pointer group">
+                    </li> */}
+                    {/* <li className="cursor-pointer group">
                         <a href="" className="group-hover:text-red-600">BÉ TRAI</a>
                         <div class="grid grid-cols-5 w-full px-28 text-sm absolute bg-gray-200 z-10 bg-opacity-95 opacity-0 left-0  group-hover:opacity-100 mt-20 group-hover: transition-all duration-500">
                             <ul class="mb-10">
@@ -199,8 +203,8 @@ const HeaderCanifa = () => {
                                 </img>
                             </ul>
                         </div>
-                    </li>
-                    <li className="cursor-pointer group">
+                    </li> */}
+                    {/* <li className="cursor-pointer group">
                         <a href="" className="group-hover:text-red-600">MỚI</a>
                         <div class="grid grid-cols-5 gap-2 w-full px-28 text-sm absolute bg-gray-200 bg-opacity-95 opacity-0 left-0  group-hover:opacity-100 mt-20 group-hover: transition-all duration-500">
                             <ul>
@@ -239,8 +243,8 @@ const HeaderCanifa = () => {
                                 </img>
                             </ul>
                         </div>
-                    </li>
-                    <li className="text-red-600 cursor-pointer">
+                    </li> */}
+                    {/* <li className="text-red-600 cursor-pointer">
                         GIÁ TỐT
                     </li>
                     <li className="cursor-pointer group">
@@ -259,10 +263,9 @@ const HeaderCanifa = () => {
                                 <li className="pt-6 text-red-600 font-bold"><a href="" className="">SĂN ƯU ĐÃI 249K</a></li>
                             </ul>
                         </div>
-                    </li>
+                    </li> */}
                 </ul>
-                <ul
-                className="flex text-2xl space-x-5 text-gray-600"
+                <ul className="flex text-2xl space-x-5 text-gray-600"
                 >
                     <li className="flex">
                         <input 
@@ -291,12 +294,11 @@ const HeaderCanifa = () => {
                     </li>
                 </ul>
             </div>
-            <p className="bg-gray-700 h-8 text-gray-300 justify-center flex items-center text-sm relative">
+            {/* <p className="bg-gray-700 h-8 text-gray-300 justify-center flex items-center text-sm relative">
                 Thêm vào giỏ hàng 499.000đ để miền phí vận chuyển
-            </p>
+            </p> */}
         </div>
     </section>
-    
   );
 }
 export default HeaderCanifa;

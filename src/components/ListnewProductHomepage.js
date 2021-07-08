@@ -3,7 +3,7 @@ import ProductnewHomepage from './ProductnewHomepage';
 
 const ListnewProductHomepage = () => {
   return (
-    <div>
+    <section>
         <div className="grid grid-cols-2">
           <img
             className="w-full cursor-pointer" 
@@ -79,7 +79,7 @@ const ListnewProductHomepage = () => {
             src="/assets/images/bst-ao-phong-gia-dinh-21-home.jpg" alt="noload">
         </img>
         <p className="w-full border-b mt-1"></p>
-    </div>
+    </section>
   );
 }
 

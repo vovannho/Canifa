@@ -21,7 +21,6 @@ const Carousel_layout = ({ children }) => {
   }
 
   return (
-    <section>
       <Flickity class="carousel"
         options={flickityOptions}
       >
@@ -51,7 +50,6 @@ const Carousel_layout = ({ children }) => {
           </div>
           
       </Flickity>
-    </section>
   );
 };
 export default Carousel_layout;
