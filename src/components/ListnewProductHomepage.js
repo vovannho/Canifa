@@ -1,36 +1,58 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import ProductnewHomepage from './ProductnewHomepage';
+import Cookies from "universal-cookie";
+import axios from "axios";
+
 
 const ListnewProductHomepage = () => {
+    const cookies = new Cookies();
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    onLoadPost();
+  }, []);
+
+  const setHeader = {
+    headers: {
+      Authorization: "Bearer " + cookies.get("Token_Canifa"),
+    },
+  };
+  
+  const onLoadPost = () => {
+    axios
+      .get("https://be.mockapi.codeby.com/api/restful/2/products", {
+        headers: setHeader.headers,
+      })
+      .then(function (response) {
+        setPosts(response.data.data);
+      })
+      .catch(function (error) {});
+  };
   return (
     <section>
-        <div className="grid grid-cols-2">
-          <img
-            className="w-full cursor-pointer" 
-            src="/assets/images/vay-be-gai-subcate.jpg" alt="noload">
-          </img>
-          <img
-            className="w-full cursor-pointer" 
-            src="/assets/images/vay-nu-subcate.jpg  " alt="noload">
-          </img>
-        </div>
+        <section className="grid grid-cols-2">
+            <img
+              className="w-full cursor-pointer" 
+              src="/assets/images/vay-be-gai-subcate.jpg" alt="noload">
+            </img>
+            <img
+              className="w-full cursor-pointer" 
+              src="/assets/images/vay-nu-subcate.jpg  " alt="noload">
+            </img>
+        </section>
         <ul className="bg-gray-700 flex items-center space-x-20 py-4 text-white">
-          <li
-          className="text-2xl font-black mx-5 pr-40"
-          >
-            SẢN PHẨM MỚI
-          </li>
-          <li className="cursor-pointer">NỮ</li>
-          <li className="cursor-pointer">NAM</li>
-          <li className="cursor-pointer">BÉ GÁI</li>
-          <li className="cursor-pointer">BÉ TRAI</li>
+            <li className="text-2xl font-bold mx-5 pr-40">SẢN PHẨM MỚI</li>
+            <li className="cursor-pointer">NỮ</li>
+            <li className="cursor-pointer">NAM</li>
+            <li className="cursor-pointer">BÉ GÁI</li>
+            <li className="cursor-pointer">BÉ TRAI</li>
         </ul>
         <ProductnewHomepage/>
         <img
             className=" cursor-pointer w-full" 
             src="/assets/images/san-pham-gia-tot-2021-bst.jpg" alt="noload">
         </img>
-        <div className="grid grid-flow-col grid-cols-3 my-14">
+        <section className="grid grid-flow-col grid-cols-3 my-14">
             <div className="flex mx-8">
                 <img
                 className=" h-12 cursor-pointer mr-5" 
@@ -44,7 +66,7 @@ const ListnewProductHomepage = () => {
                         CANIFA sẵn sàng hỗ trợ đổi sản phẩm cho bạn trong vòng 30 ngày trên toàn hệ thống.
                     </p>
                 </div>
-            </div>  
+            </div> 
             <div className="flex mx-8">
                 <img
                 className=" h-16 cursor-pointer mr-5" 
@@ -73,7 +95,7 @@ const ListnewProductHomepage = () => {
                     </p>
                 </div>
             </div>  
-        </div>
+        </section>
         <img
             className=" cursor-pointer w-full" 
             src="/assets/images/bst-ao-phong-gia-dinh-21-home.jpg" alt="noload">
@@ -82,5 +104,4 @@ const ListnewProductHomepage = () => {
     </section>
   );
 }
-
 export default ListnewProductHomepage;

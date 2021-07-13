@@ -23,8 +23,9 @@ const Carousel_layout = ({ children }) => {
   return (
       <Flickity class="carousel"
         options={flickityOptions}
+        className="absolute"
       >
-          <div class="carousel-cell ">
+          <div class="carousel-cell  ">
               <img
                   className=" w-full cursor-pointer "
                   src="/assets/images/img-slide1.png" alt="noload">
