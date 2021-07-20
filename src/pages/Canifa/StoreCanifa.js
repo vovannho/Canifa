@@ -5,7 +5,6 @@ import ListStore from '../../components/ListStore';
 
 const StoreCanifa = () => {
   return (
-
     <section className="max-w-screen-2xl mx-auto">
       <HeaderCanifa/>
         <div className="px-20 text-gray-600 text-xs ">

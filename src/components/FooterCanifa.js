@@ -3,7 +3,7 @@ import { FaFacebookSquare,FaInstagramSquare,FaYoutube} from "react-icons/fa";
 
 const FooterCanifa = () => {
   return (
-    <section className="flex justify-between text-xs text-gray-600 my-8 mx-20 ">
+    <section className="flex justify-between text-xs text-gray-700 my-8 mx-20 ">
       <section className="w-2/12">
           <p className="text-base font-semibold ">CÔNG TY CỔ PHẦN CANIFA
           </p>

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { FiSearch, } from "react-icons/fi";
 import { BiMap,BiUser } from "react-icons/bi";
-import { AiOutlineShoppingCart} from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";  
 import DemoMarquee from "../pages/DemoMarquee";
 const HeaderCanifa = () => {
     const [showGT, setShowGT] = useState(false);
@@ -37,18 +36,7 @@ const HeaderCanifa = () => {
     
   return (
     <section className=" sticky top-0 relative z-10">
-            <div className="h-20  bg-yellow-300 flex items-center">
-                {/* <img
-                    className=" cursor-pointer w-12/12 h-14 mx-auto " 
-                    src="/assets/images/Top-banner.png" alt="noload">
-                </img> */}
-                <div className="max-w-screen-2xl mx-20 flex items-center">
-                <picture>
-			    	<source media="(max-width: 991px)" srcSet="https://media.canifa.com/wysiwyg/09-17Jul-Fixtop-Mobile.png"/>
-			       <img src="https://media.canifa.com/wysiwyg/Mask_Group.png" alt="" />
-			    </picture>
-                </div>
-            </div>
+          
             <div id="navbar" className="flex justify items-center justify-between py-6 relative max-w-screen-2xl mx-20 bg-white">
                 <ul className="flex justify items-center space-x-8  text-gray-600 font-normal z-10  ">
                 <Link to="/HomeCanifa">
@@ -63,8 +51,10 @@ const HeaderCanifa = () => {
                     onMouseEnter={()=>setShowGT(true)}
                     onMouseLeave={()=>setShowGT(false)}
                     >   
+                    <Link to="/WomenProductList">
                         <a href="" className=" hover:text-red-600">NỮ</a>
-                        <div class= {`absolute left-0 w-full  ${showGT==true ? `` : `hidden`}`} style={{paddingTop:'70px'}}>
+                    </Link>
+                        <div class= {`absolute left-0 w-full  ${showGT===true ? `` : `hidden`}`} style={{paddingTop:'70px'}}>
                             <div className="grid grid-cols-5  pt-2 text-sm px-28 pb-10 bg-white bg-opacity-90 ">
                                 <ul class="">
                                     <li className="py-4 text-gray-700 font-bold"><a href="" className="">HẰNG NGÀY</a></li>
@@ -113,8 +103,10 @@ const HeaderCanifa = () => {
                     onMouseEnter={()=>setShowUL2(true)}
                     onMouseLeave={()=>setShowUL2(false)}
                     >
+                    <Link to="/MenProductList">
                         <a href="" className="hover:text-red-600">NAM</a>
-                        <div class={`absolute  w-full left-0 ${showUL2==true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
+                    </Link>
+                        <div class={`absolute  w-full left-0 ${showUL2===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
                             <div className="grid grid-cols-5  pt-2 px-28 text-sm bg-white bg-opacity-90">
                                 <ul class="">
                                     <li className="py-4 text-gray-700 font-bold"><a href="" className="">HẰNG NGÀY</a></li>
@@ -162,8 +154,10 @@ const HeaderCanifa = () => {
                     onMouseEnter={()=>setShowUL3(true)}
                     onMouseLeave={()=>setShowUL3(false)}
                     >
+                        <Link to="/GirlsProductList">
                         <a href="" className="hover:text-red-600">BÉ GÁI</a>
-                        <div class={`absolute  w-full left-0 ${showUL3==true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
+                        </Link>
+                        <div class={`absolute  w-full left-0 ${showUL3===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
                             <div className="grid grid-cols-5  pt-2 px-28 text-sm bg-white bg-opacity-90">
                                 <ul class="mb-10">
                                     <li className="py-4 text-gray-700 font-bold"><a href="" className="">HẰNG NGÀY</a></li>
@@ -214,8 +208,10 @@ const HeaderCanifa = () => {
                     onMouseEnter={()=>setShowUL4(true)}
                     onMouseLeave={()=>setShowUL4(false)}
                     >
+                        <Link to="/BoyProductList">
                         <a href="" className="group-hover:text-red-600">BÉ TRAI</a>
-                        <div class={`absolute  w-full left-0 ${showUL4==true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
+                        </Link>
+                        <div class={`absolute  w-full left-0 ${showUL4===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
                             <div className="grid grid-cols-5  pt-2 px-28 text-sm bg-white bg-opacity-90">
                                 <ul class="">
                                     <li className="py-4 text-gray-700 font-bold"><a href="" className="">HẰNG NGÀY</a></li>
@@ -263,38 +259,38 @@ const HeaderCanifa = () => {
                     onMouseEnter={()=>setShowUL5(true)}
                     onMouseLeave={()=>setShowUL5(false)}>
                         <a href="" className="text-red-600">MỚI</a>
-                        <div class={`absolute  w-full left-0 ${showUL5==true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
+                        <div class={`absolute  w-full left-0 ${showUL5===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
                             <div className="grid grid-cols-5 gap-1 pt-6 px-24 text-sm bg-white bg-opacity-90">
-                                <ul>
-                                    <li className="pb-4 text-gray-700 font-bold"><a href="" className="">NỮ </a></li>
+                                <ul className="group">
+                                    <li className="pb-4 text-gray-700 font-bold group-hover:text-red-600"><a href="" className="">NỮ </a></li>
                                     <img
                                         className="cursor-pointer"
                                         src="/assets/images/Nu_SS2021.png" alt="noload">
                                     </img>
                                 </ul>
-                                <ul>
-                                    <li className="pb-4 text-gray-700 font-bold"><a href="" className="">NAM</a></li>
+                                <ul className="group">
+                                    <li className="pb-4 text-gray-700 font-bold group-hover:text-red-600"><a href="" className="">NAM</a></li>
                                     <img
                                         className="cursor-pointer"
                                         src="/assets/images/Nam_SS2021.jpg" alt="noload">
                                     </img>
                                 </ul>
-                                <ul>
-                                    <li className="pb-4 text-gray-700 font-bold"><a href="" className="">BÉ TRAI</a></li>
+                                <ul className="group">
+                                    <li className="pb-4 text-gray-700 font-bold group-hover:text-red-600"><a href="" className="">BÉ TRAI</a></li>
                                     <img
                                         className="cursor-pointer"
                                         src="/assets/images/beTrai_SS2021.png" alt="noload">
                                     </img>
                                 </ul>
-                                <ul>
-                                    <li className="pb-4 text-gray-700 font-bold"><a href="" className="">BÉ GÁI</a></li>
+                                <ul className="group">
+                                    <li className="pb-4 text-gray-700 font-bold group-hover:text-red-600"><a href="" className="">BÉ GÁI</a></li>
                                     <img
                                         className="cursor-pointer"
                                         src="/assets/images/beGai_SS2021.png" alt="noload">
                                     </img>
                                 </ul>
-                                <ul>
-                                <li className="pb-4 text-gray-700 font-bold"><a href="" className="">BST ÁO PHÔNG GIA ĐÌNH</a></li>
+                                <ul className="group">
+                                <li className="pb-4 text-gray-700 font-bold group-hover:text-red-600"><a href="" className="">BST ÁO PHÔNG GIA ĐÌNH</a></li>
                                 <img
                                     className="cursor-pointer mb-10"
                                     src="/assets/images/bst-ao-phong-mege-menu.jpg" alt="noload">
@@ -303,15 +299,17 @@ const HeaderCanifa = () => {
                             </div>
                         </div>
                     </div>
+                    <Link to="/PriceGoodProductList">
                     <div className="text-red-600 cursor-pointer">
                         GIÁ TỐT
                     </div>
+                    </Link>
                     <div className="cursor-pointer"
                     onMouseEnter={()=>setShowUL6(true)}
                     onMouseLeave={()=>setShowUL6(false)}
                     >
                         <a href="" className="text-red-600">GIẢM GIÁ</a>
-                        <div class={`absolute  w-full left-0 ${showUL6==true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
+                        <div class={`absolute  w-full left-0 ${showUL6===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
                             <div className="flex pt-8 px-24 text-sm bg-white bg-opacity-90">
                                 <ul class="mb-10 w-2/12">
                                     <li className="pb-4 text-gray-700 font-bold"><a href="" className="">GIÁ MỚI</a></li>
@@ -373,12 +371,14 @@ const HeaderCanifa = () => {
                         )}
                     </li>
                     <li>
-                        <AiOutlineShoppingCart
-                        className="cursor-pointer"
-                        onClick={() =>
-                            setShowCart(!showCart)
-                          }
-                        />
+                        <img
+                             onClick={() =>
+                                setShowCart(!showCart)
+                              }
+                            className="cursor-pointer" 
+                            src="/assets/images/img-cart.svg" alt="noload">
+                        </img>
+                       
                         {showCart===true && (
                         <list className="absolute w-4/12 text-xs text-center mt-3 py-10 bg-white right-0 shadow-xl">
                             <p>Bạn chưa có sản phẩm nào trong giỏ hàng.</p>

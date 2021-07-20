@@ -5,16 +5,47 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import HomeCanifa from './pages/Canifa/HomeCanifa';
 import StoreCanifa from './pages/Canifa/StoreCanifa';
 import LoginCanifa from './pages/Canifa/LoginCanifa';
+import WomenProductList from './pages/Canifa/WomenProductList';
+import PriceGoodProductList from './pages/Canifa/PriceGoodProductList';
+import GirlsProductList from './pages/Canifa/GirlsProductList';
+import MenProductList from './pages/Canifa/MenProductList';
+import BoyProductList from './pages/Canifa/BoyProductList';
 import ForgotPasswordCanifa from './pages/Canifa/ForgotPasswordCanifa';
 import HeaderCanifa from './components/HeaderCanifa';
 import FooterCanifa from './components/FooterCanifa';
 import ProductnewHomepage from './components/ProductnewHomepage';
 import ListStore from './components/ListStore';
 import DemoMarquee from './pages/DemoMarquee';
+import FilterProduct from './components/FilterProduct';
 function App() {
   return (
     <BrowserRouter>
       <Switch>
+        <Route
+          exact
+          path={`/PriceGoodProductList`}
+          component={PriceGoodProductList}
+        />
+        <Route
+          exact
+          path={`/WomenProductList`}
+          component={WomenProductList}
+        />
+        <Route
+          exact
+          path={`/GirlsProductList`}
+          component={GirlsProductList}
+        />
+        <Route
+          exact
+          path={`/BoyProductList`}
+          component={BoyProductList}
+        />
+        <Route
+          exact
+          path={`/MenProductList`}
+          component={MenProductList}
+        />
         <Route
           exact
           path={`/DemoMarquee`}
@@ -59,6 +90,11 @@ function App() {
           exact
           path={`/ListStore`}
           component={ListStore}
+        />
+        <Route
+          exact
+          path={`/FilterProduct`}
+          component={FilterProduct}
         />
         
       </Switch>
