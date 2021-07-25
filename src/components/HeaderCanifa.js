@@ -304,7 +304,7 @@ const HeaderCanifa = () => {
                         GIÁ TỐT
                     </div>
                     </Link>
-                    <div className="cursor-pointer"
+                    <div
                     onMouseEnter={()=>setShowUL6(true)}
                     onMouseLeave={()=>setShowUL6(false)}
                     >
@@ -312,16 +312,16 @@ const HeaderCanifa = () => {
                         <div class={`absolute  w-full left-0 ${showUL6===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
                             <div className="flex pt-8 px-24 text-sm bg-white bg-opacity-90">
                                 <ul class="mb-10 w-2/12">
-                                    <li className="pb-4 text-gray-700 font-bold"><a href="" className="">GIÁ MỚI</a></li>
-                                    <li><a href="" className="">Nữ </a></li>
-                                    <li><a href="" className="">Nam </a></li>
-                                    <li><a href="" className="">Bé Gái </a></li>
-                                    <li><a href="" className="">Bé Trai </a></li>
+                                    <li className="pb-4 text-gray-700 font-bold"><a href="" >GIÁ MỚI</a></li>
+                                    <li><a href="" className="cursor-pointer hover:text-red-600">Nữ </a></li>
+                                    <li><a href="" className="cursor-pointer hover:text-red-600">Nam </a></li>
+                                    <li><a href="" className="cursor-pointer hover:text-red-600">Bé Gái </a></li>
+                                    <li><a href="" className="cursor-pointer hover:text-red-600">Bé Trai </a></li>
                                 </ul>
                                 <ul className="mb-10 w-2/12">
-                                    <li className="pb-4 text-red-600 font-bold"><a href="" className="">SĂN ƯU ĐÃI 99K</a></li>
-                                    <li className="pb-4 text-red-600 font-bold"><a href="" className="">SĂN ƯU ĐÃI 149K</a></li>
-                                    <li className="pb-4 text-red-600 font-bold"><a href="" className="">SĂN ƯU ĐÃI 249K</a></li>
+                                    <li className="pb-4 text-red-600 font-bold"><a href="" className="cursor-pointer">SĂN ƯU ĐÃI 99K</a></li>
+                                    <li className="pb-4 text-red-600 font-bold"><a href="" className="cursor-pointer">SĂN ƯU ĐÃI 149K</a></li>
+                                    <li className="pb-4 text-red-600 font-bold"><a href="" className="cursor-pointer">SĂN ƯU ĐÃI 249K</a></li>
                                 </ul>
                             </div>
                         </div>

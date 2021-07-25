@@ -36,6 +36,7 @@ const PriceGoodProductList = () => {
             <p className="text-center text-gray-700 font-bold text-xl">SẢN PHẨM GIÁ TỐT</p>
         </section>
       </section>
+      <p className="w-full border-b mt-10"></p>
       <FooterCanifa/>
     </section>
   );

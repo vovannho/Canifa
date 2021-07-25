@@ -6,6 +6,10 @@ import HomeCanifa from './pages/Canifa/HomeCanifa';
 import StoreCanifa from './pages/Canifa/StoreCanifa';
 import LoginCanifa from './pages/Canifa/LoginCanifa';
 import WomenProductList from './pages/Canifa/WomenProductList';
+import NewProductWomen from './pages/Canifa/NewProductWomen';
+import NewProductBoy from './pages/Canifa/NewProductBoy';
+import NewProductGirls from './pages/Canifa/NewProductGirls';
+import NewProductMen from './pages/Canifa/NewProductMen';
 import PriceGoodProductList from './pages/Canifa/PriceGoodProductList';
 import GirlsProductList from './pages/Canifa/GirlsProductList';
 import MenProductList from './pages/Canifa/MenProductList';
@@ -25,6 +29,26 @@ function App() {
           exact
           path={`/PriceGoodProductList`}
           component={PriceGoodProductList}
+        />
+        <Route
+          exact
+          path={`/NewProductWomen`}
+          component={NewProductWomen}
+        />
+        <Route
+          exact
+          path={`/NewProductGirls`}
+          component={NewProductGirls}
+        />
+        <Route
+          exact
+          path={`/NewProductBoy`}
+          component={NewProductBoy}
+        />
+        <Route
+          exact
+          path={`/NewProductMen`}
+          component={NewProductMen}
         />
         <Route
           exact

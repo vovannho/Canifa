@@ -2,6 +2,7 @@ import React from 'react';
 import FilterProduct from '../../components/FilterProduct';
 import FooterCanifa from '../../components/FooterCanifa';
 import HeaderCanifa from '../../components/HeaderCanifa';
+import { Link } from "react-router-dom";
 
 const BoyProductList = () => {
   return (
@@ -11,8 +12,10 @@ const BoyProductList = () => {
       <section className="flex text-xs px-20">
         <section className="w-2/12">
             <ul className="space-y-2 sticky top-20">
-              <li className="font-bold mt-5 cursor-pointer hover:text-red-600">Bé Trai</li> 
+              <li className="font-bold mt-5 mb-3 cursor-pointer hover:text-red-600">Bé Trai</li> 
+              <Link to="/NewProductBoy">
               <li className="font-bold cursor-pointer hover:text-red-600">Sản phẩm mới</li>
+              </Link>
               <li className="font-bold text-red-600 cursor-pointer">Danh mục sản phẩm</li>
               <li className="cursor-pointer hover:text-red-600">Áo phông</li>
               <li className="cursor-pointer hover:text-red-600">Áo Polo</li>
@@ -48,6 +51,7 @@ const BoyProductList = () => {
             <p className="text-center text-gray-700 font-bold text-xl">DANH MỤC SẢN PHẨM</p>
         </section>
       </section>
+      <p className="border-b mt-10 mx-20"></p>
       <FooterCanifa/>
     </section>
   );
