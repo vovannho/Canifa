@@ -30,7 +30,7 @@ const ListnewProductHomepage = () => {
   };
   return (
     <section>
-        <section className="grid grid-cols-2">
+        <section className="2xl:grid grid-cols-2 sm:flex">
             <img
               className="w-full cursor-pointer" 
               src="/assets/images/vay-be-gai-subcate.jpg" alt="noload">
@@ -40,13 +40,15 @@ const ListnewProductHomepage = () => {
               src="/assets/images/vay-nu-subcate.jpg  " alt="noload">
             </img>
         </section>
-        <ul className="bg-gray-700 flex items-center space-x-20 py-4 text-white">
-            <li className="text-2xl font-bold mx-5 pr-40">SẢN PHẨM MỚI</li>
+        <list className="bg-gray-700 flex py-4 text-white ">
+          <div className="2xl:text-2xl sm:text-xs font-bold 2xl:mx-5 sm:mx-2 2xl:pr-40 sm:pr-5">SẢN PHẨM MỚI</div>
+          <ul className="flex items-center 2xl:space-x-20 sm:space-x-2 2xl:text-base sm:text-xs">
             <li className="cursor-pointer">NỮ</li>
             <li className="cursor-pointer">NAM</li>
             <li className="cursor-pointer">BÉ GÁI</li>
             <li className="cursor-pointer">BÉ TRAI</li>
-        </ul>
+          </ul>
+        </list>
         <ProductnewHomepage/>
         <img
             className=" cursor-pointer w-full" 

@@ -12,7 +12,7 @@ const DemoMarquee = () => {
 const list = [
 'Thêm vào giỏ 499.000₫ để miễn phí vận chuyển',
 // someReactElemYouCanClick,
-'ĐỔI HÀNG MIỄN PHÍ - Tại tất cả cửa hàng trong 30 ngày',
+' ĐỔI HÀNG MIỄN PHÍ - Tại tất cả cửa hàng trong 30 ngày',
 
 ]
   return (

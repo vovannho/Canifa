@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 const ForgotPasswordCanifa = () => {
   return (
     <section className="max-w-screen-2xl mx-auto text-xs text-gray-600 ">
-        <HeaderCanifa/>
+        <HeaderCanifa/> 
             <section className="my-6 mx-20">
-                <p className="cursor-pointer">Trang chủ</p>
-                <p> / Forgot Your Password</p>
+                <a className="cursor-pointer">Trang chủ</a>
+                <a className="cursor-pointer"> / Forgot Your Password</a>
             </section>
             <section className="w-5/12 mx-auto mb-32">
                 <h1 className="text-2xl font-bold text-gray-700 pt-5 ">QUÊN MẬT KHẨU?</h1>

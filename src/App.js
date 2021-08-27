@@ -3,6 +3,7 @@ import React  from 'react';
 import './App.css';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import HomeCanifa from './pages/Canifa/HomeCanifa';
+import Product from './pages/Canifa/Product';
 import StoreCanifa from './pages/Canifa/StoreCanifa';
 import LoginCanifa from './pages/Canifa/LoginCanifa';
 import WomenProductList from './pages/Canifa/WomenProductList';
@@ -29,6 +30,11 @@ function App() {
           exact
           path={`/PriceGoodProductList`}
           component={PriceGoodProductList}
+        />
+        <Route
+          exact
+          path={`/Product`}
+          component={Product}
         />
         <Route
           exact

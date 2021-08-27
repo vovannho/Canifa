@@ -12,41 +12,37 @@ const ProductnewHomepage = () => {
 
   const setHeader = {
     headers: {
-      Authorization: "Bearer " + cookies.get("Token_Canifa"),
+      Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhc2V0X2lkIjoiMSIsInVzZXJfaWQiOjF9.yNv4diskwutLypG8_bcNaTXhL1X_4-79NcglQol0848"// + cookies.get("Token_Canifa"),
     },
   };
   
   const onLoadProduct = () => {
     axios
-      .get("https://be.mockapi.codeby.com/api/restful/products", {
+      .get("https://be-mockapi.codeby.com/api/restful/products/1", {
         headers: setHeader.headers,
       })
       .then(function (response) {
         setProducts(response.data.data);
-        console.log("response.data", response);
+        console.log("response.data", response.data);
       })
       .catch(function (error) {});
   };
   return (
     <section className="grid grid-cols-3 gap-2">
-      <pre className="text-sm">
-          {JSON.stringify(products, null, "  ")}
-        </pre>  
-      {products.map((product, key) => (
-        <div key={key} className="text-center text-lg col-span-1">
+        <div className="text-center text-lg col-span-1">
           <img
               className="cursor-pointer" 
-              src="/assets/images/img-product.jpg" alt="noload">
+              src={products.images && products.images.media ? products.images.media[0].file : null}
+              alt="noload">
           </img>
           <div className="my-4 font-light">
-              {product.name}
+              {products.name}
             <p className="flex justify-center">
-              <p className="line-through mr-2">{product.old_price}</p>
-              <p className="font-black text-red-600">{product.special_price}</p>
+              <p className="line-through mr-2">{products.old_price}</p>
+              <p className="font-black text-red-600">{products.special_price}</p>
             </p>
           </div>
         </div>
-        ))}
     </section>
   );
 }

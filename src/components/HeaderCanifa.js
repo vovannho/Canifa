@@ -52,19 +52,19 @@ const HeaderCanifa = () => {
                     onMouseLeave={()=>setShowGT(false)}
                     >   
                     <Link to="/WomenProductList">
-                        <a href="" className=" hover:text-red-600">NỮ</a>
+                        <a href="" className=" hover:text-red-600 text-sm">NỮ</a>
                     </Link>
                         <div class= {`absolute left-0 w-full  ${showGT===true ? `` : `hidden`}`} style={{paddingTop:'70px'}}>
-                            <div className="grid grid-cols-5  pt-2 text-sm px-28 pb-10 bg-white bg-opacity-90 ">
+                            <div className="grid grid-cols-5  pt-2 text-xs px-28 pb-10 bg-white bg-opacity-90 ">
                                 <ul class="">
-                                    <li className="py-4 text-gray-700 font-bold"><a href="" className="">HẰNG NGÀY</a></li>
-                                    <li><a href="" className="">Áo phông <a className="text-red-600 ml-1 font-bold">HOT</a></a></li>
-                                    <li><a href="" className="">Áo sơmi<a className="text-red-600 ml-1 font-bold">HOT</a></a></li>
-                                    <li><a href="" className="">Áo chống nắng<a className="text-red-600 ml-1 font-bold">HOT</a></a></li>
+                                    <li className="py-4 text-gray-700 font-bold "><a href="" className="">HẰNG NGÀY</a></li>
+                                    <li><a href="" className="">Áo phông <a className="text-red-600 ml-1 ">HOT</a></a></li>
+                                    <li><a href="" className="">Áo sơmi<a className="text-red-600 ml-1 ">HOT</a></a></li>
+                                    <li><a href="" className="">Áo chống nắng<a className="text-red-600 ml-1 ">HOT</a></a></li>
                                     <li><a href="" className="">Áo kiểu</a></li>
                                     <li><a href="" className="">Áo liền thân - Đầm</a></li>
                                     <li><a href="" className="">Chân váy</a></li>
-                                    <li><a href="" className="">Quần jeans<a className="text-red-600 ml-1 font-bold">HOT</a></a></li>
+                                    <li><a href="" className="">Quần jeans<a className="text-red-600 ml-1 ">HOT</a></a></li>
                                     <li><a href="" className="">Quần khaki</a></li>
                                     <li><a href="" className="">Quần shorts</a></li>
                                     <li><a href="" className="">Quần vải</a></li>
@@ -104,10 +104,10 @@ const HeaderCanifa = () => {
                     onMouseLeave={()=>setShowUL2(false)}
                     >
                     <Link to="/MenProductList">
-                        <a href="" className="hover:text-red-600">NAM</a>
+                        <a href="" className="hover:text-red-600 text-sm">NAM</a>
                     </Link>
                         <div class={`absolute  w-full left-0 ${showUL2===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
-                            <div className="grid grid-cols-5  pt-2 px-28 text-sm bg-white bg-opacity-90">
+                            <div className="grid grid-cols-5  pt-2 px-28 text-xs bg-white bg-opacity-90">
                                 <ul class="">
                                     <li className="py-4 text-gray-700 font-bold"><a href="" className="">HẰNG NGÀY</a></li>
                                     <li><a href="" className="">Áo phông <a className="text-red-600 ml-1 font-bold">HOT</a></a></li>
@@ -155,10 +155,10 @@ const HeaderCanifa = () => {
                     onMouseLeave={()=>setShowUL3(false)}
                     >
                         <Link to="/GirlsProductList">
-                        <a href="" className="hover:text-red-600">BÉ GÁI</a>
+                        <a href="" className="hover:text-red-600 text-sm">BÉ GÁI</a>
                         </Link>
                         <div class={`absolute  w-full left-0 ${showUL3===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
-                            <div className="grid grid-cols-5  pt-2 px-28 text-sm bg-white bg-opacity-90">
+                            <div className="grid grid-cols-5  pt-2 px-28 text-xs bg-white bg-opacity-90">
                                 <ul class="mb-10">
                                     <li className="py-4 text-gray-700 font-bold"><a href="" className="">HẰNG NGÀY</a></li>
                                     <li><a href="" className="">Áo phông <a className="text-red-600 ml-1 font-bold">HOT</a></a></li>
@@ -209,10 +209,10 @@ const HeaderCanifa = () => {
                     onMouseLeave={()=>setShowUL4(false)}
                     >
                         <Link to="/BoyProductList">
-                        <a href="" className="group-hover:text-red-600">BÉ TRAI</a>
+                        <a href="" className="group-hover:text-red-600 text-sm">BÉ TRAI</a>
                         </Link>
                         <div class={`absolute  w-full left-0 ${showUL4===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
-                            <div className="grid grid-cols-5  pt-2 px-28 text-sm bg-white bg-opacity-90">
+                            <div className="grid grid-cols-5  pt-2 px-28 text-xs bg-white bg-opacity-90">
                                 <ul class="">
                                     <li className="py-4 text-gray-700 font-bold"><a href="" className="">HẰNG NGÀY</a></li>
                                     <li><a href="" className="">Áo phông <a className="text-red-600 ml-1 font-bold">HOT</a></a></li>
@@ -258,9 +258,9 @@ const HeaderCanifa = () => {
                     <div className="cursor-pointer"
                     onMouseEnter={()=>setShowUL5(true)}
                     onMouseLeave={()=>setShowUL5(false)}>
-                        <a href="" className="text-red-600">MỚI</a>
+                        <a href="" className="text-red-600 text-sm">MỚI</a>
                         <div class={`absolute  w-full left-0 ${showUL5===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
-                            <div className="grid grid-cols-5 gap-1 pt-6 px-24 text-sm bg-white bg-opacity-90">
+                            <div className="grid grid-cols-5 gap-1 pt-6 px-24 text-xs bg-white bg-opacity-90">
                                 <ul className="group">
                                     <li className="pb-4 text-gray-700 font-bold group-hover:text-red-600"><a href="" className="">NỮ </a></li>
                                     <img
@@ -300,7 +300,7 @@ const HeaderCanifa = () => {
                         </div>
                     </div>
                     <Link to="/PriceGoodProductList">
-                    <div className="text-red-600 cursor-pointer">
+                    <div className="text-red-600 cursor-pointer text-sm">
                         GIÁ TỐT
                     </div>
                     </Link>
@@ -308,9 +308,9 @@ const HeaderCanifa = () => {
                     onMouseEnter={()=>setShowUL6(true)}
                     onMouseLeave={()=>setShowUL6(false)}
                     >
-                        <a href="" className="text-red-600">GIẢM GIÁ</a>
+                        <a href="" className="text-red-600 text-sm">GIẢM GIÁ</a>
                         <div class={`absolute  w-full left-0 ${showUL6===true ? `` : `hidden`} `}style={{paddingTop:'70px'}}>
-                            <div className="flex pt-8 px-24 text-sm bg-white bg-opacity-90">
+                            <div className="flex pt-8 px-24 text-xs bg-white bg-opacity-90">
                                 <ul class="mb-10 w-2/12">
                                     <li className="pb-4 text-gray-700 font-bold"><a href="" >GIÁ MỚI</a></li>
                                     <li><a href="" className="cursor-pointer hover:text-red-600">Nữ </a></li>
@@ -355,17 +355,17 @@ const HeaderCanifa = () => {
                         />
                         {showUser===true && (
                         <list className="absolute w-52 text-sm bg-white space-y-2 mt-3 py-2 pl-2 pr-4 right-11 shadow-xl">
-                            <p className="font-bold">Bạn đã có tài khoản?</p>
-                            <p>
+                            <p className="font-bold ">Bạn đã có tài khoản?</p>
+                            <div className="flex cursor-pointer">
                                 <Link to="/LoginCanifa">
-                                    <a className="cursor-pointer">Đăng nhập / </a>
+                                    <p className="cursor-pointer">Đăng nhập / </p>
                                 </Link>
-                                <Link to="/LoginCanifa">
-                                <a className="cursor-pointer">Đăng kí</a>
+                                <Link to="">
+                                    <p className="cursor-pointer">Đăng kí</p>
                                 </Link>
-                            </p>
-                            <Link to="/ForgotPasswordCanifa">
-                            <p className="cursor-pointer">Bạn quên mật khẩu ?</p>
+                            </div>
+                            <Link to="/LoginCanifa">
+                            <p className="cursor-pointer py-2">Bạn quên mật khẩu ?</p>
                             </Link>
                         </list>
                         )}
@@ -397,7 +397,7 @@ const HeaderCanifa = () => {
             </p> */}
         </div>
         <div id="marquee" 
-        className="bg-gray-700 h-8 text-gray-300 justify-center flex items-center text-sm mx-20 ">
+        className="bg-gray-700 h-9 px-2 text-gray-300 justify-center flex items-center text-sm 2xl:mx-20 sm:mx-0">
             <DemoMarquee/>
         </div>
         {
