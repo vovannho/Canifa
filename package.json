@@ -13,6 +13,7 @@
     "cookie": "^0.4.1",
     "flickity": "^2.2.2",
     "react": "^17.0.2",
+    "react-api-codeby": "^1.0.2",
     "react-dom": "^17.0.2",
     "react-flickity-component": "^3.6.1",
     "react-icons": "^4.2.0",

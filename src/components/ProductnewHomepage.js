@@ -12,7 +12,7 @@ const ProductnewHomepage = () => {
 
   const setHeader = {
     headers: {
-      Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhc2V0X2lkIjoiMSIsInVzZXJfaWQiOjF9.yNv4diskwutLypG8_bcNaTXhL1X_4-79NcglQol0848"// + cookies.get("Token_Canifa"),
+    Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhc2V0X2lkIjoiMSIsInVzZXJfaWQiOjF9.yNv4diskwutLypG8_bcNaTXhL1X_4-79NcglQol0848"// + cookies.get("Token_Canifa"),
     },
   };
   
@@ -28,14 +28,14 @@ const ProductnewHomepage = () => {
       .catch(function (error) {});
   };
   return (
-    <section className="grid grid-cols-3 gap-2">
+    <section className=" 2xl:grid grid-cols-3 gap-2 max-w-sm">
         <div className="text-center text-lg col-span-1">
           <img
-              className="cursor-pointer" 
+              className="cursor-pointer my-3" 
               src={products.images && products.images.media ? products.images.media[0].file : null}
               alt="noload">
           </img>
-          <div className="my-4 font-light">
+          <div className="font-light text-center">
               {products.name}
             <p className="flex justify-center">
               <p className="line-through mr-2">{products.old_price}</p>

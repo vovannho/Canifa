@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState,useEffect} from "react";
+import { apiCodeby } from "../configs/apiCodeby";
 
 const FilterProduct = () => {
     const [showFilter, setShowFilter] = useState(false);
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        async function fetchMyAPI() {
+            const products = await apiCodeby.getData('/products', {search:'sex,man'})
+            console.log('products, ', products)
+            setProducts(products)   
+        }
+
+        fetchMyAPI()
+    }, [])
   return (
     <section>
         <section className="text-xs text-gray-700">
@@ -102,7 +113,7 @@ const FilterProduct = () => {
             )}
         </section>
         <section className="grid grid-cols-5 gap-1">
-        {[...Array(20)].map((item, key) => (
+        {products.map((item, key) => (
             <div className=" text-lg col-span-1 text-gray-600">
                 <img
                     className="cursor-pointer" 
@@ -114,10 +125,10 @@ const FilterProduct = () => {
                         <p className="w-4 h-4 bg-red-500"></p>
                         <p className="w-4 h-4 bg-blue-300"></p>
                     </div>
-                    <p className="">Áo phong người lớn unisex</p>
+                    <p className="">{item.name}</p>
                     <div className="flex">
-                        <p className="line-through mr-2">229.000đ</p>
-                        <p className="font-black text-red-600">209.000đ</p>
+                        <p className="line-through mr-2">{item.old_price}</p>
+                        <p className="font-black text-red-600">{item.special_price}</p>
                     </div>
                     <p className="text-red-600">Giảm 30%</p>
                 </div>

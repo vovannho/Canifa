@@ -10,7 +10,7 @@ const HomeCanifa = () => {
   return (
     <section className="max-w-screen-2xl mx-auto">
             <div className=" bg-yellow-300 flex items-center">
-                <div className="max-w-screen-2xl flex items-center 2xl:mx-20 sm:mx-0 ">
+                <div className="max-w-screen-2xl w-full flex items-center 2xl:mx-20 sm:mx-0 ">
                   <picture>
                     <source media="(max-width: 991px)" srcSet="https://media.canifa.com/wysiwyg/09-17Jul-Fixtop-Mobile.png"/>
                     <img src="https://media.canifa.com/wysiwyg/Mask_Group.png" alt="" />

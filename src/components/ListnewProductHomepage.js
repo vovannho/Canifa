@@ -41,8 +41,8 @@ const ListnewProductHomepage = () => {
             </img>
         </section>
         <list className="bg-gray-700 flex py-4 text-white ">
-          <div className="2xl:text-2xl sm:text-xs font-bold 2xl:mx-5 sm:mx-2 2xl:pr-40 sm:pr-5">SẢN PHẨM MỚI</div>
-          <ul className="flex items-center 2xl:space-x-20 sm:space-x-2 2xl:text-base sm:text-xs">
+          <div className="text-2xl font-bold 2xl:mx-5 sm:mx-2 pr-40 ">SẢN PHẨM MỚI</div>
+          <ul className="flex items-center space-x-20 text-base ">
             <li className="cursor-pointer">NỮ</li>
             <li className="cursor-pointer">NAM</li>
             <li className="cursor-pointer">BÉ GÁI</li>
@@ -54,7 +54,7 @@ const ListnewProductHomepage = () => {
             className=" cursor-pointer w-full" 
             src="/assets/images/san-pham-gia-tot-2021-bst.jpg" alt="noload">
         </img>
-        <section className="grid grid-flow-col grid-cols-3 my-14">
+        <section className="grid grid-flow-col grid-cols-3 my-14 ">
             <div className="flex mx-8">
                 <img
                 className=" h-12 cursor-pointer mr-5" 
