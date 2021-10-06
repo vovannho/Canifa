@@ -397,7 +397,7 @@ const HeaderCanifa = () => {
             </p> */}
         </div>
         <div id="marquee" 
-        className="bg-gray-700 h-8 px-2 text-gray-300 justify-center flex items-center text-sm 2xl:mx-20 sm:mx-0">
+        className="bg-gray-700 h-7 px-2 text-gray-300 justify-center flex items-center text-sm 2xl:mx-20 sm:mx-0">
             <DemoMarquee/>
         </div>
         {
