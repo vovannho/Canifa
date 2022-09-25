@@ -20,7 +20,7 @@ import HeaderCanifa from './components/HeaderCanifa';
 import FooterCanifa from './components/FooterCanifa';
 import ProductnewHomepage from './components/ProductnewHomepage';
 import ListStore from './components/ListStore';
-import DemoMarquee from './pages/DemoMarquee';
+// import DemoMarquee from './pages/DemoMarquee';
 import FilterProduct from './components/FilterProduct';
 function App() {
   return (
@@ -76,11 +76,11 @@ function App() {
           path={`/MenProductList`}
           component={MenProductList}
         />
-        <Route
+        {/* <Route
           exact
           path={`/DemoMarquee`}
           component={DemoMarquee}
-        />
+        /> */}
         <Route
           exact
           path={`/HomeCanifa`}
